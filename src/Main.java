@@ -17,10 +17,7 @@ public class Main {
         curso2.setDescricao("descrição curso js");
         curso2.setCargaHoraria(4);
 
-        Mentoria mentoria = new Mentoria();
-        mentoria.setTitulo("mentoria de java");
-        mentoria.setDescricao("descrição mentoria java");
-        mentoria.setData(LocalDate.now());
+        Mentoria mentoria = new Mentoria("mentoria de java", "descrição mentoria java");
 
         /*System.out.println(curso1);
         System.out.println(curso2);
