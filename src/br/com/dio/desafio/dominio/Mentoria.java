@@ -4,22 +4,25 @@ import java.time.LocalDate;
 
 public class Mentoria extends Conteudo{
 
-    private LocalDate data;
+    private LocalDate criadoEm;
 
     @Override
     public double calcularXp() {
         return XP_PADRAO + 20d;
     }
 
-    public Mentoria() {
+    public Mentoria(String titulo, String descricao) {
+        setTitulo(titulo);
+        setDescricao(descricao);
+        setCriadoEm(LocalDate.now());
     }
 
-    public LocalDate getData() {
-        return data;
+    public LocalDate getCriadoEm() {
+        return criadoEm;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public void setCriadoEm(LocalDate criadoEm) {
+        this.criadoEm = criadoEm;
     }
 
     @Override
@@ -27,7 +30,7 @@ public class Mentoria extends Conteudo{
         return "Mentoria{" +
                 "titulo='" + getTitulo() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
-                ", data=" + data +
+                ", data=" + criadoEm +
                 '}';
     }
 }
